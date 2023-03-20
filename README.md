@@ -41,7 +41,7 @@ int[] sortedArray = sortedList.ToArray();
 
 ### Installation
 
-To use the SortedList<T> class in your project, copy the SortedList.cs file into your project directory and add it to your project.
+Current implementations is available as [NuGet Package](https://www.nuget.org/packages/Pents.SortedList)
 
 ### Contributing
 
