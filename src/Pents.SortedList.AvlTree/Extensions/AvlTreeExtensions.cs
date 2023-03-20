@@ -1,6 +1,6 @@
 using Pents.SortedList.Models.Abstractions;
 
-namespace Pents.SortedList.Models.Extensions;
+namespace Pents.SortedList.AvlTree.Extensions;
 
 public static class AvlTreeExtensions
 {

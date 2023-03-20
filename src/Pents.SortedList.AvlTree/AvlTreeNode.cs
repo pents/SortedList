@@ -16,7 +16,7 @@ public class AvlTreeNode<T> : IAvlTreeNode<T>
 
     private AvlTreeNode<T>? _left;
     private AvlTreeNode<T>? _right;
-    
+
     private int _height;
     private int BalanceFactor => (_left?._height ?? 0) - (_right?._height ?? 0);
 
@@ -34,17 +34,15 @@ public class AvlTreeNode<T> : IAvlTreeNode<T>
     private AvlTreeNode<T> AddInternal(T value)
     {
         var comparison = value.CompareTo(Value);
-        
-        switch (comparison)
+
+        if (comparison < 0)
         {
-            case < 0:
-                _left = _left == null ? new AvlTreeNode<T>(value) : _left.AddInternal(value);
-                break;
-            case > 0:
-                _right = _right == null ? new AvlTreeNode<T>(value) : _right.AddInternal(value);
-                break;
-            default:
-                throw new ArgumentException("Value already exists in the list.");
+            _left = _left == null ? new AvlTreeNode<T>(value) : _left.AddInternal(value);
+        }
+        else
+        {
+            // Allow non-unique values by adding them to the right subtree
+            _right = _right == null ? new AvlTreeNode<T>(value) : _right.AddInternal(value);
         }
 
         return Balance();
@@ -68,7 +66,7 @@ public class AvlTreeNode<T> : IAvlTreeNode<T>
                 break;
             default:
             {
-                if (Left == null || Right == null)
+                if (_left == null || _right == null)
                 {
                     return _left ?? _right;
                 }
