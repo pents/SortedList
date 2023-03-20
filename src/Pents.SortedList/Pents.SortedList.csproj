@@ -3,10 +3,19 @@
     <PropertyGroup>
         <IsPackable>true</IsPackable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>Pents.SortedList</Title>
+        <Authors>Pents</Authors>
+        <Description>Sorted list implementation based on AVL tree</Description>
+        <PackageProjectUrl>https://github.com/pents/SortedList</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/pents/SortedList</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Pents.SortedList.AvlTree\Pents.SortedList.AvlTree.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="../../README.md" Pack="true" PackagePath="\"/>
     </ItemGroup>
 
 </Project>

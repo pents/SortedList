@@ -12,6 +12,8 @@
 
   <PropertyGroup>
     <NugetPackageVersion>1.0.0</NugetPackageVersion>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
   
 </Project>

@@ -1,4 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
-    
+  <PropertyGroup>
+    <IsPackable>true</IsPackable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Title>Pents.SortedList.AvlTree</Title>
+    <Authors>Pents</Authors>
+    <Description>Avl tree simple implementation</Description>
+    <PackageProjectUrl>https://github.com/pents/SortedList</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/pents/SortedList</RepositoryUrl>
+  </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+  
 </Project>
